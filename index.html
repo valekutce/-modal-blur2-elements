@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Animated modal - background blur filter</title>
+</head>
+<body>
+    <div class="modal">
+        <div class="modal-content">
+            <button class="close-modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <p class="title">Are you sure?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt temporibus rem nostrum ullam cum tenetur repellat optio numquam omnis ea.</p>
+        
+            <div class="actions">
+                <button class="cancel">cancel</button>
+                <button>confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="bck-image"></div>
+    <button class="open-modal">Open Modal</button>
+
+    <script>
+        var btnOpen = document.querySelector('.open-modal');
+        var btnClose = document.querySelector('.close-modal');
+        var modal = document.querySelector('.modal');
+        var toggleOpenClose = () => {
+            modal.classList.toggle('opened')
+        }
+
+        btnOpen.addEventListener('click', toggleOpenClose);
+        btnClose.addEventListener('click', toggleOpenClose);
+    </script>
+    
+</body>
+</html>
